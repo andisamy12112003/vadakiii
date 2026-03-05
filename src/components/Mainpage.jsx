@@ -191,8 +191,31 @@ const images = [
 ];  
 
 import { useNavigate } from "react-router";
+import React, { useRef, useState } from 'react';
+import successSound from '../assets/audio/poovu.mp3';
 
 export default function Mainpage() {
+
+   const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlayPause = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  // Optional: Update state when audio ends naturally
+  const handleEnded = () => {
+    setIsPlaying(false);
+  };
+
+
   const navigate = useNavigate();
   const nextPage = () => {
       navigate("/wish",{replace:true})
@@ -209,8 +232,22 @@ export default function Mainpage() {
       <div className="relative z-10 flex h-full flex-col p-6 md:p-10">
         <header className="mb-8 text-center">
           <h1 className="text-3xl font-bold text-white md:text-5xl">
-            NEHA<span className="text-sm">{`(vadakkii)`}</span> Beautiful Memories
+            नेहा<span className="text-sm">{`(vadakkii)`}</span> Beautiful Memories
           </h1>
+          <div>
+            <div className="flex justify-center items-center flex-col">
+              <h1 className="mt-3 text-2xl text-white font-bold">Play the song and see the old नेहा💜</h1>
+      <button onClick={togglePlayPause} className="p-4 rounded-[100%] bg-amber-300 mt-3 text-xl text-white bg-pink-400 font-bold">
+        {isPlaying ? 'Pause' : 'Play'}
+      </button>
+            </div>
+      <audio
+        ref={audioRef}
+        src={successSound}
+        onEnded={handleEnded}
+        // You can add 'controls' attribute here for default browser controls, but for custom controls, you manage it via refs
+      />
+    </div>
         </header>
 
         {/* Infinite Image Carousel */}
