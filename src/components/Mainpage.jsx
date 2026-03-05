@@ -224,7 +224,9 @@ export default function Mainpage() {
       navigate("/",{replace:true})
     }
   return (
-    <div className="relative h-[110%] w-full overflow-hidden bg-gradient-to-br from-pink-500 via-purple-600 to-pink-500">
+    <div className="relative h-[110%] w-full overflow-hidden " 
+    style={{ backgroundImage: `url(${img97})`,backgroundRepeat:"no-repeat",backgroundSize:'100vw'}}
+    >
       {/* Dark overlay for better text contrast */}
       <div className="absolute inset-0 bg-black/20"></div>
 
