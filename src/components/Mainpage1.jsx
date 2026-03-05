@@ -2,8 +2,12 @@ import React from "react";
 
 // Import your local photo
 import loverPhoto from "../assets/p93.png";
-
+import { useNavigate } from "react-router";
 export default function Mainpage1() {
+  const navigate = useNavigate();
+  const nextPage = () => {
+      navigate("/final",{replace:true})
+    }
   return (
     <div className="relative flex flex-col h-screen w-full items-center justify-center overflow-hidden bg-gradient-to-br from-rose-400 via-pink-500 to-purple-600">
       {/* Soft overlay */}
@@ -44,6 +48,7 @@ export default function Mainpage1() {
           transition-all duration-300 ease-out
           hover:bg-white/30 hover:scale-105
         `}
+        onClick={nextPage}
       >
         {/* Static heart icon */}
         <span className="ml-2">Go Next Page</span>

@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 export default function Homepage() {
   const navigate = useNavigate();
+  const nextPage = () => {
+      navigate("/memo",{replace:true})
+    }
   const [hearts, setHearts] = useState([]);
 const [clicked, setClicked] = useState(false);
   // Adjust total count depending on performance target
   const HEART_COUNT = 1500; // ≈1500 hearts
-const handleButtonClick = () => {
-    // Perform any necessary logic here (e.g., validation, API calls)
-    navigate("/memo"); // Navigate to the "/about" route
-  };
+
   useEffect(() => {
     const list = Array.from({ length: HEART_COUNT }, (_, i) => ({
       id: i,
@@ -83,9 +83,10 @@ const handleButtonClick = () => {
           transition-all duration-300 ease-out
           hover:bg-white/30 hover:scale-105
         `}
+        onClick={nextPage}
       >
         {/* Static heart icon */}
-        <span className="ml-2" onClick={handleButtonClick}>Go Next Page</span>
+        <span className="ml-2" >Go Next Page</span>
 
         {/* Optional overlay heart animation */}
         <span

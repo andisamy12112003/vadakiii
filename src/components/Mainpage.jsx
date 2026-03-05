@@ -188,9 +188,15 @@ const images = [
     img151, img152
     
 
-];
+];  
+
+import { useNavigate } from "react-router";
 
 export default function Mainpage() {
+  const navigate = useNavigate();
+  const nextPage = () => {
+      navigate("/wish",{replace:true})
+    }
   return (
     <div className="relative h-[110%] w-full overflow-hidden bg-gradient-to-br from-pink-500 via-purple-600 to-pink-500">
       {/* Dark overlay for better text contrast */}
@@ -229,7 +235,10 @@ export default function Mainpage() {
           text-white font-bold text-lg
           transition-all duration-300 ease-out
           hover:bg-white/30 hover:scale-105
-        `}
+        ` 
+      
+      }
+      onClick={nextPage}
       >
         {/* Static heart icon */}
         <span className="ml-2">Go Next Page</span>
