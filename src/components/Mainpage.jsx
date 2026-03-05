@@ -238,7 +238,7 @@ export default function Mainpage() {
           </h1>
           <div>
             <div className="flex justify-center items-center flex-col">
-              <h1 className="mt-3 text-2xl text-white font-bold">Play the song and see the old नेहा💜</h1>
+              <h1 className="mt-3 text-2xl text-white font-bold">Play the Song and Feel the Old नेहा💜</h1>
       <button onClick={togglePlayPause} className="p-4 rounded-[100%] bg-amber-300 mt-3 text-xl text-white bg-pink-400 font-bold">
         {isPlaying ? 'Pause' : 'Play'}
       </button>
