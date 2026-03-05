@@ -234,7 +234,7 @@ export default function Mainpage() {
       <div className="relative z-10 flex h-full flex-col p-6 md:p-10">
         <header className="mb-8 text-center">
           <h1 className="text-3xl font-bold text-white md:text-5xl">
-            नेहा<span className="text-sm">{`(vadakkii)`}</span> Beautiful Memories
+            नेहा💜<span className="text-sm">{`(vadakkii)`}</span> Beautiful Memories
           </h1>
           <div>
             <div className="flex justify-center items-center flex-col">
