@@ -225,7 +225,7 @@ export default function Mainpage() {
     }
   return (
     <div className="relative h-[110%] w-full overflow-hidden " 
-    style={{ backgroundImage: `url(${img97})`,backgroundRepeat:"no-repeat",backgroundSize:'100vw'}}
+    style={{ backgroundImage: `url(${img97})`,backgroundRepeat:"no-repeat",backgroundSize:'100vw',backgroundSize:"cover",backgroundPosition:"center"}}
     >
       {/* Dark overlay for better text contrast */}
       <div className="absolute inset-0 bg-black/20"></div>
