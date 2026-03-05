@@ -40,7 +40,7 @@ const handleButtonClick = () => {
               animationDelay: `${heart.delay}s`,
             }}
           >
-            💗
+            💜
           </div>
         ))}
       </div>
@@ -62,7 +62,7 @@ const handleButtonClick = () => {
         `}
       >
         {/* Static heart icon */}
-        <span className="text-2xl">❤️</span>
+        <span className="text-2xl">💜</span>
         <span className="ml-2">Click multiple Time and Feel Flow of Hearts</span>
 
         {/* Optional overlay heart animation */}
