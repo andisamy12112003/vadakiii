@@ -197,6 +197,9 @@ export default function Mainpage() {
   const nextPage = () => {
       navigate("/wish",{replace:true})
     }
+    const previousPage = () => {
+      navigate("/",{replace:true})
+    }
   return (
     <div className="relative h-[110%] w-full overflow-hidden bg-gradient-to-br from-pink-500 via-purple-600 to-pink-500">
       {/* Dark overlay for better text contrast */}
@@ -228,7 +231,10 @@ export default function Mainpage() {
             </div>
           </div>
         </div>
-        <button
+
+
+        <div className="flex justify-center">
+          <button
         className={` w-auto px-4 mt-6
           group relative flex h-10 items-center justify-center
           rounded-full bg-white/20 backdrop-blur-sm
@@ -251,6 +257,30 @@ export default function Mainpage() {
         >
         </span>
       </button>
+      <button
+        className={`ml-8 w-auto px-4 mt-6
+          group relative flex h-10 items-center justify-center
+          rounded-full bg-white/20 backdrop-blur-sm
+          text-white font-bold text-lg
+          transition-all duration-300 ease-out
+          hover:bg-white/30 hover:scale-105
+        ` 
+      
+      }
+      onClick={previousPage}
+      >
+        {/* Static heart icon */}
+        <span className="ml-2">Previous Page</span>
+
+        {/* Optional overlay heart animation */}
+        <span
+          className="absolute inset-0 flex items-center justify-center
+                     opacity-0 group-hover:opacity-100
+                     transition-opacity duration-200"
+        >
+        </span>
+      </button>
+        </div>
         
       </div>
 

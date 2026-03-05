@@ -2,8 +2,13 @@ import React from "react";
 
 // Import your local background image
 import loverBg from "../assets/p95.png";
+import { useNavigate } from "react-router";
 
 export default function Mainpage2() {
+  const navigate = useNavigate()
+  const previousPage = () => {
+      navigate("/wish",{replace:true})
+    }
   return (
     <div className="relative flex h-screen w-full items-center justify-center overflow-hidden">
       {/* Background image (lover photo) */}
@@ -33,6 +38,28 @@ export default function Mainpage2() {
         <p className="mt-4 max-w-md text-sm text-white/90 md:text-base">
           ****************
         </p>
+
+        <button
+        className={` ml-8 w-auto px-4 mt-6
+          group relative flex h-10 items-center justify-center
+          rounded-full bg-white/20 backdrop-blur-sm
+          text-white font-bold text-lg
+          transition-all duration-300 ease-out
+          hover:bg-white/30 hover:scale-105
+        `}
+        onClick={previousPage}
+      >
+        {/* Static heart icon */}
+        <span className="ml-2">Previous Page</span>
+
+        {/* Optional overlay heart animation */}
+        <span
+          className="absolute inset-0 flex items-center justify-center
+                     opacity-0 group-hover:opacity-100
+                     transition-opacity duration-200"
+        >
+        </span>
+      </button>
         
       </div>
 

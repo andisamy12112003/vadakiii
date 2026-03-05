@@ -8,6 +8,9 @@ export default function Mainpage1() {
   const nextPage = () => {
       navigate("/final",{replace:true})
     }
+  const previousPage = () => {
+      navigate("/memo",{replace:true})
+    }
   return (
     <div className="relative flex flex-col h-screen w-full items-center justify-center overflow-hidden bg-gradient-to-br from-rose-400 via-pink-500 to-purple-600">
       {/* Soft overlay */}
@@ -52,6 +55,27 @@ export default function Mainpage1() {
       >
         {/* Static heart icon */}
         <span className="ml-2">Go Next Page</span>
+
+        {/* Optional overlay heart animation */}
+        <span
+          className="absolute inset-0 flex items-center justify-center
+                     opacity-0 group-hover:opacity-100
+                     transition-opacity duration-200"
+        >
+        </span>
+      </button>
+      <button
+        className={` ml-8 w-auto px-4 mt-6
+          group relative flex h-10 items-center justify-center
+          rounded-full bg-white/20 backdrop-blur-sm
+          text-white font-bold text-lg
+          transition-all duration-300 ease-out
+          hover:bg-white/30 hover:scale-105
+        `}
+        onClick={previousPage}
+      >
+        {/* Static heart icon */}
+        <span className="ml-2">Previous Page</span>
 
         {/* Optional overlay heart animation */}
         <span
