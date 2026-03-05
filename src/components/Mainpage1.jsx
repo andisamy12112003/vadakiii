@@ -30,7 +30,7 @@ export default function Mainpage1() {
         {/* Birthday wishes text */}
         <div className="text-center text-white">
           <h1 className="text-2xl font-bold md:text-3xl">
-            Happy Birthday, Vadakiii 💖
+            Happy Birthday नेहा 💜, Vadakiii 💖
           </h1>
           <p className="mt-3 text-sm leading-relaxed md:text-base">
             Happy Birthday! May your day sparkle with joy and surprises.
