@@ -11,7 +11,7 @@ export default function Verificationpage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [verified, setVerified] = useState(false);
-  const CORRECT_PASSWORD = "@vadakiii"; // ✅ your fixed password
+  const CORRECT_PASSWORD = "@vadakki"; // ✅ your fixed password
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ export default function Verificationpage() {
       setError("");
     } else {
       setVerified(false);
-      setError("Thappu @vadakiii... Nalla yosichu Enter panu");
+      setError("Thappu @vadakki Nalla yosichu Enter panu");
     }
   };
 
