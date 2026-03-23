@@ -37,7 +37,7 @@ export default function Verificationpage() {
           }}>
       <div className="w-full max-w-md rounded-xl bg-trasperant bg-opacity-10 backdrop-blur-md p-6 shadow-2xl">
         <h2 className="text-2xl font-bold text-white text-center mb-6">
-          Enter Password
+          Unlock your gifts
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -64,7 +64,7 @@ export default function Verificationpage() {
             type="submit"
             className="w-full py-3 px-4 rounded-lg bg-white text-purple-600 font-bold shadow-lg hover:bg-opacity-90 transition-colors"
           >
-            Verify & Go Next
+            Verify & Take It!!!
           </button>
 
 
