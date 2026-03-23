@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import img97 from "../assets/p97.png"
+
+
 export default function Homepage() {
   const navigate = useNavigate();
   const nextPage = () => {
@@ -15,7 +18,7 @@ const [clicked, setClicked] = useState(false);
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
-      size: 4 + Math.random() * 6,   // 4–10px
+      size: 7 + Math.random() * 6,   // 4–10px
       opacity: 0.3 + Math.random() * 0.7,
       duration: 5 + Math.random() * 15, // 5–20s
       delay: Math.random() * 10,
@@ -24,7 +27,9 @@ const [clicked, setClicked] = useState(false);
   }, []);
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden bg-gray-900">
+    <div className="relative h-screen w-screen overflow-hidden" 
+    style={{ backgroundImage: `url(${img97})`,backgroundRepeat:"no-repeat",backgroundSize:'100vw',backgroundSize:"cover",backgroundPosition:"center"}}
+    >
       {/* Animated hearts background */}
       <div className="absolute inset-0">
         {hearts.map((heart) => (
@@ -57,12 +62,12 @@ const [clicked, setClicked] = useState(false);
           rounded-full bg-white/20 backdrop-blur-sm
           text-white font-bold text-lg
           transition-all duration-300 ease-out
-          hover:bg-white/30 hover:scale-105
+          hover:bg-white/30 hover:scale-105 mt-90
           ${clicked ? "animate-ping-once" : ""}
         `}
       >
         {/* Static heart icon */}
-        <span className="text-2xl">💜</span>
+        <span className="text-5xl">💜</span>
         <span className="ml-2">Click multiple Time and Feel Flow of Hearts</span>
 
         {/* Optional overlay heart animation */}
@@ -78,15 +83,15 @@ const [clicked, setClicked] = useState(false);
       <button
         className={` w-auto px-4 mt-6
           group relative flex h-10 items-center justify-center
-          rounded-full bg-white/20 backdrop-blur-sm
-          text-white font-bold text-lg
+          rounded-full bg-purple-500 text-green-300 backdrop-blur-sm
+           font-bold text-lg
           transition-all duration-300 ease-out
           hover:bg-white/30 hover:scale-105
         `}
         onClick={nextPage}
       >
         {/* Static heart icon */}
-        <span className="ml-2" >Go Next Page</span>
+        <span className="ml-2 bg-purple-500 text-green-300" >Go Next Page</span>
 
         {/* Optional overlay heart animation */}
         <span

@@ -46,8 +46,8 @@ export default function Mainpage1() {
             <button
         className={` w-auto px-4 mt-6
           group relative flex h-10 items-center justify-center
-          rounded-full bg-white/20 backdrop-blur-sm
-          text-white font-bold text-lg
+          rounded-full bg-purple-500 text-green-300 backdrop-blur-sm
+           font-bold text-lg
           transition-all duration-300 ease-out
           hover:bg-white/30 hover:scale-105
         `}
@@ -67,8 +67,8 @@ export default function Mainpage1() {
       <button
         className={` ml-8 w-auto px-4 mt-6
           group relative flex h-10 items-center justify-center
-          rounded-full bg-white/20 backdrop-blur-sm
-          text-white font-bold text-lg
+          rounded-full bg-purple-500 text-green-300 backdrop-blur-sm
+           font-bold text-lg
           transition-all duration-300 ease-out
           hover:bg-white/30 hover:scale-105
         `}

@@ -9,6 +9,9 @@ export default function Mainpage2() {
   const previousPage = () => {
       navigate("/wish",{replace:true})
     }
+    const nextPage = () => {
+      navigate("/verify",{replace:true})
+    }
   return (
     <div className="relative flex h-screen w-full items-center justify-center overflow-hidden">
       {/* Background image (lover photo) */}
@@ -39,11 +42,34 @@ export default function Mainpage2() {
           ****************
         </p>
 
+        <div className="flex justify-center">
+          <button
+        className={` w-auto px-4 mt-6
+          group relative flex h-10 items-center justify-center
+          rounded-full backdrop-blur-sm
+          bg-purple-500 text-green-300 font-bold text-lg
+          transition-all duration-300 ease-out
+          hover:bg-white/30 hover:scale-105
+        `}
+        onClick={nextPage}
+      >
+        {/* Static heart icon */}
+        <span className="ml-2">Go Next Page</span>
+
+        {/* Optional overlay heart animation */}
+        <span
+          className="absolute inset-0 flex items-center justify-center
+                     opacity-0 group-hover:opacity-100
+                     transition-opacity duration-200"
+        >
+        </span>
+      </button>
+
         <button
         className={` ml-8 w-auto px-4 mt-6
           group relative flex h-10 items-center justify-center
-          rounded-full bg-white/20 backdrop-blur-sm
-          text-white font-bold text-lg
+          rounded-full  backdrop-blur-sm
+          bg-purple-500 text-green-300 font-bold text-lg
           transition-all duration-300 ease-out
           hover:bg-white/30 hover:scale-105
         `}
@@ -60,6 +86,7 @@ export default function Mainpage2() {
         >
         </span>
       </button>
+        </div>
         
       </div>
 
