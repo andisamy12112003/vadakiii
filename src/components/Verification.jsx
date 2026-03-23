@@ -20,7 +20,7 @@ export default function Verificationpage() {
       setError("");
     } else {
       setVerified(false);
-      setError("Thappu @vadakki Nalla yosichu Enter panu");
+      setError("Thappu @vadakki Nalla yosichu Enter panu... Onnoda munnadiye irukku");
     }
   };
 
