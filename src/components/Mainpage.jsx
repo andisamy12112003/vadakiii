@@ -192,7 +192,7 @@ const images = [
 
 import { useNavigate } from "react-router";
 import React, { useRef, useState } from 'react';
-import successSound from '../assets/audio/poovu.mp3';
+import successSound from '../assets/audio/love.mp3';
 
 export default function Mainpage() {
 
