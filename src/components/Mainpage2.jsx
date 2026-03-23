@@ -39,7 +39,16 @@ export default function Mainpage2() {
           This is for you 💖
         </h1>
         <p className="mt-4 max-w-md text-sm text-white/90 md:text-base">
-          ****************
+          "நீண்ட நாள் உறவு இல்லையென்றாலும்,
+இதய உறவாய் இணைந்தாய்!
+சிரிப்பில் பாதியும்,
+அழுகையில் மீதியும்,
+பகிர்ந்து கொள்ளும்
+உன்னத பந்தம் நீ!
+வார்த்தை தேவையற்ற
+என் மௌனம் பேசும்
+என்னில் பாதி நீ!!!"
+
         </p>
 
         <div className="flex justify-center">
